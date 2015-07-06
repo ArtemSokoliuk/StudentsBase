@@ -1,0 +1,223 @@
+{% extends "students/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Журнал відвідування студентів{% endblock meta_title %}
+
+{% block title %}Облік відвідування{% endblock title %}
+
+{% block content %}
+<!--                    <div>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    </button>
+                        <p align="center"> October </p>
+                    </div>
+
+-->
+                    <div>
+                    <h5 align="center">
+                    <a  href="#">&larr;</a> Червень 2015 <a href="#">&rarr;</a></h5>
+                        <!-- Start Students Listing -->
+                        <table class="table table-striped table-bordered table-hover ">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Студент</th>
+                                    <th>1</th>                
+                                    <th>2</th>                
+                                    <th>3</th>                
+                                    <th>4</th>                
+                                    <th>5</th>                
+                                    <th>6</th>                
+                                    <th>7</th>                
+                                    <th>8</th>                
+                                    <th>9</th>                
+                                    <th>10</th>                
+                                    <th>11</th>                
+                                    <th>12</th>                
+                                    <th>13</th>                
+                                    <th>14</th>                
+                                    <th>15</th>                
+                                    <th>16</th>                
+                                    <th>17</th>                
+                                    <th>18</th>                
+                                    <th>19</th>                
+                                    <th>20</th>                
+                                    <th>21</th>                
+                                    <th>22</th>                
+                                    <th>23</th>                
+                                    <th>24</th>                
+                                    <th>25</th>                
+                                    <th>26</th>                
+                                    <th>27</th>                
+                                    <th>28</th>                
+                                    <th>29</th>                
+                                    <th>30</th>                              
+                                </tr>    
+                            </thead>
+                            <tbody>
+                               {% for student in journal %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td><a href="{% url "students_edit" student.id %}">
+                                        {{ student.first_name_surname }}
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""></label>
+                                        </div>
+                                    </td>
+                               </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                        <!-- End Students Listing -->
+                        
+{% endblock content %}
