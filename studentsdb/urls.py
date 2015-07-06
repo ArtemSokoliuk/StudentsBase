@@ -24,11 +24,8 @@ urlpatterns = patterns('',
                            'students.views.groups_delete',
                            name='groups_delete'),
                        url(r'^admin/', include(admin.site.urls)),
-<<<<<<< HEAD
                        # Journal urls
                        url(r'^journal/$', 'students.views.journal', name='journal'),
-=======
->>>>>>> dab3c75415194e02f7c8d1f5fdfb8ef94dea7bf1
 
                        )
 

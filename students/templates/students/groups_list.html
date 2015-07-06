@@ -23,15 +23,11 @@
                             </thead>
                             <tbody>
                                {% for group in groups %}
-                                <tr>
+                                </tr>
                                     <td>{{ forloop.counter }}</td>
                                     <td><a href="{% url "groups_edit" group.id %}">{{ group.name }}</td>
                                     <td><a href="{% url "students_edit" group.leader.id %}"> {{group.leader.name}} 
-<<<<<<< HEAD
                                     <td>
-=======
-                                    <td><td>
->>>>>>> dab3c75415194e02f7c8d1f5fdfb8ef94dea7bf1
                                         <div class="btn-group">
                                             <button type="button"
                                                     class="btn btn-default dropdown-toggle"
