@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from .settings import MEDIA_ROOT, DEBUG
 
 urlpatterns = patterns('',
                        # Students urls
@@ -25,8 +26,12 @@ urlpatterns = patterns('',
                            name='groups_delete'),
                        url(r'^admin/', include(admin.site.urls)),
                        # Journal urls
-                       url(r'^journal/$', 'students.views.journal', name='journal'),
-
-                       )
+                       url(r'^journal/$', 'students.views.journal', name='journal'))
 
 urlpatterns += staticfiles_urlpatterns()
+
+if DEBUG:
+    # serve files from media folder
+    urlpatterns += patterns('',
+                            url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+                                'document_root': MEDIA_ROOT}))
